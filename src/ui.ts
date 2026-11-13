@@ -1,8 +1,8 @@
 import type { CSSProperties } from 'react';
 
 export const colors = {
-  teal: '#0f4c5c',
-  ink: '#163b40',
+  teal: '#154d45',
+  ink: '#183b37',
   cream: '#fffaf3',
   sand: '#f7ead7',
   amber: '#b36b16',
@@ -12,7 +12,7 @@ export const colors = {
 };
 
 export const pageStyle: CSSProperties = {
-  fontFamily: 'Arial, sans-serif',
+  fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   color: colors.ink,
   background: colors.cream,
   minHeight: '100vh',

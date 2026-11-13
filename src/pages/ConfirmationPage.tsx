@@ -28,7 +28,7 @@ export default function ConfirmationPage() {
 
   return (
     <main style={pageStyle}>
-      <PageHeader title="Order placed ✅" backLabel="← Home" />
+      <PageHeader title="Demo order saved ✅" backLabel="← Home" />
       <section style={sectionStyle}>
         <span style={demoBadge}>DEMO ORDER</span>
         <h2 style={{ marginBottom: 4 }}>Thank you, {order.customer.name}!</h2>
@@ -66,7 +66,7 @@ export default function ConfirmationPage() {
               fontSize: 18,
             }}
           >
-            <strong>Total to pay</strong>
+            <strong>Demo total (not charged)</strong>
             <strong>{formatPrice(order.total)}</strong>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function ConfirmationPage() {
           <p style={{ margin: '4px 0 0' }}>{order.customer.phone}</p>
           <p style={{ margin: '4px 0 0' }}>{order.customer.address}</p>
           {order.customer.notes && <p style={{ margin: '4px 0 0', color: colors.muted }}>Notes: {order.customer.notes}</p>}
-          <p style={{ margin: '10px 0 0' }}>💵 Payment: {order.paymentMethod}</p>
+          <p style={{ margin: '10px 0 0' }}>Payment: {order.paymentMethod} (demo only; not processed)</p>
         </div>
 
         <div style={{ marginTop: 18, marginBottom: 30 }}>

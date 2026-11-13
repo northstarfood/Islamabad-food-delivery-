@@ -150,7 +150,10 @@ export default function CheckoutPage() {
 
           <div style={{ ...cardStyle, marginTop: 20 }}>
             <strong>Payment</strong>
-            <p style={{ margin: '6px 0 0' }}>💵 Cash on delivery (pay the rider)</p>
+            <p style={{ margin: '6px 0 0' }}>Cash on delivery (demo display only)</p>
+            <p style={{ margin: '5px 0 0', color: colors.muted, fontSize: 13 }}>
+              No payment is processed and no delivery is arranged.
+            </p>
           </div>
 
           <div style={{ ...cardStyle, marginTop: 12 }}>

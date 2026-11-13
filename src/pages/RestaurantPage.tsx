@@ -44,14 +44,17 @@ export default function RestaurantPage() {
     <main style={pageStyle}>
       <PageHeader title={`${restaurant.emoji} ${restaurant.name}`} backLabel="← All restaurants" />
       <section style={sectionStyle}>
-        <span style={demoBadge}>DEMO</span>
+        <span style={demoBadge}>DEMO RESTAURANT</span>
         <p style={{ margin: '10px 0 4px' }}>{restaurant.category}</p>
         <p style={{ margin: '0 0 16px' }}>⭐ {restaurant.rating} · 🕒 {restaurant.time}</p>
         <div style={demoNotice}>
           This is a demo restaurant with sample food and prices. It is not a real partner.
         </div>
 
-        <h3 style={{ marginTop: 24 }}>Menu</h3>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginTop: 24, marginBottom: 12 }}>
+          <h3 style={{ margin: 0 }}>Sample menu</h3>
+          <span style={{ ...demoBadge, fontSize: 10 }}>DEMO PRICES</span>
+        </div>
         <div style={{ display: 'grid', gap: 12 }}>
           {restaurant.menu.map((item) => {
             const inCart = lines.find((l) => l.itemId === item.id);
