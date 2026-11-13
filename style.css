@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fffaf3;
+}
+
+input:focus {
+  outline: 2px solid #0f4c5c;
+}
+
+article {
+  transition: transform 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-4px);
+}
