@@ -32,8 +32,8 @@ Create a production build with `npm run build` and serve it locally with
 
 - Build command: `npm run build`
 - Build output directory: `dist`
-- The app uses client-side routes. `public/_redirects` is copied into `dist/`
-  and makes Cloudflare Pages serve `index.html` for route requests, including
-  direct visits and refreshes on restaurant, cart, checkout, and order pages.
+- The app uses client-side routes. Cloudflare Workers' existing
+  `not_found_handling: single-page-application` configuration handles route
+  requests; no `_redirects` file is needed.
 
 The demo delivery fee is a placeholder defined in `src/lib/format.ts`.
