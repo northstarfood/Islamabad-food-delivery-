@@ -28,6 +28,7 @@ export default function CheckoutPage() {
   const [address, setAddress] = useState('');
   const [notes, setNotes] = useState('');
   const [errors, setErrors] = useState<FormErrors>({});
+  const [storageError, setStorageError] = useState('');
 
   if (lines.length === 0) {
     return (
@@ -76,7 +77,12 @@ export default function CheckoutPage() {
       status: 'Placed (demo)',
     };
 
-    saveOrder(order);
+    if (!saveOrder(order)) {
+      setStorageError('We could not save your demo order on this device. Check your browser storage settings and try again.');
+      return;
+    }
+
+    setStorageError('');
     clearCart();
     navigate(`/order/${order.id}`, { replace: true, state: { order } });
   };
@@ -93,6 +99,11 @@ export default function CheckoutPage() {
         </div>
 
         <form onSubmit={handleSubmit} noValidate>
+          {storageError && (
+            <p role="alert" style={{ color: colors.error, marginTop: 16 }}>
+              {storageError}
+            </p>
+          )}
           <label htmlFor="name" style={labelStyle}>Full name</label>
           <input
             id="name"
