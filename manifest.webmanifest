@@ -1,0 +1,10 @@
+{
+  "name": "FoodLane Islamabad",
+  "short_name": "FoodLane",
+  "description": "Discover and order food from local restaurants in Islamabad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf3",
+  "theme_color": "#0f4c5c",
+  "orientation": "portrait"
+}
